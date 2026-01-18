@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro</title>
+    <!-- Meta info -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Abed">
+    
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind output CSS -->
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-9999 flex items-center justify-center bg-black">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Header with Navbar -->
+    <header class="relative bg-gray-400">
+        <nav class="flex justify-between items-center p-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+                <img class="w-10 h-10 rounded-full" src="img/357319784_fb9e078e-5495-4e3c-a558-488100c50b06.svg" alt="">
+                <a href=""
+                    class="text-white font-bold text-3xl hover:text-blue-400 transition-colors duration-700">TechPro</a>
+            </div>
+
+            <!-- Hamburger Button (for mobile) -->
+            <button id="menu-btn" class="block md:hidden text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-6 items-center text-white">
+                <!-- Menu links -->
+                <a href="#" class="border-b-2 border-blue-500 hover:text-blue-700 transition-all duration-300">Home</a>
+                <a href="#sec2" class="hover:text-blue-700 transition-all duration-300">Features</a>
+                <a href="#" class="hover:text-blue-700 transition-all duration-300">Testimonials</a>
+                <a href="#Contact" class="hover:text-blue-700 transition-all duration-300">Contact</a>
+                <!-- Buttons -->
+                <div class="flex gap-4">
+                    <button
+                        class="bg-blue-400 text-white font-thin p-2 rounded-lg hover:bg-blue-500 active:scale-85 transition duration-300 ease-in-out">
+                        Log in
+                    </button>
+                    <button
+                        class="bg-emerald-400 text-white font-thin p-2 rounded-lg hover:bg-emerald-600 active:scale-85 transition duration-300 ease-in-out shadow-6xl shadow-emerald-400">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebar"
+            class="fixed top-2 -right-full w-64 h-fit p-8 flex flex-col gap-6 transition-all duration-300 md:hidden z-50 bg-blue-300 rounded-4xl">
+            
+            <!-- Close Button -->
+            <button id="close-btn" class="block md:hidden text-white hover:text-red-400 transition-colors duration-300 self-end">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu links -->
+            <a href="#" class="md:border-blue-500 md:border-b-2 hover:text-blue-400 transition-all duration-300 text-white">Home</a>
+            <a href="#sec2" class="hover:text-blue-400 transition-all duration-300 text-white">Features</a>
+            <a href="#" class="hover:text-blue-400 transition-all duration-300 text-white">Testimonials</a>
+            <a href="#Contact" class="hover:text-blue-400 transition-all duration-300 text-white">Contact</a>
+
+            <!-- Mobile Buttons -->
+            <div class="flex flex-col gap-2 mt-4">
+                <button
+                    class="bg-blue-400 text-white font-thin p-2 rounded-lg hover:bg-blue-500 active:scale-85 transition duration-300 ease-in-out">
+                    Log in
+                </button>
+                <button
+                    class="bg-emerald-400 text-white font-thin p-2 rounded-lg hover:bg-emerald-600 active:scale-85 transition duration-300 ease-in-out">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class=" h-screen bg-[url('/img/1311.jpg')] bg-cover bg-bottom relative">
+            <div class="absolute inset-0 bg-black opacity-40 "></div> <!-- overlay -->
+            <div class="container mx-auto px-4 py-40 text-center">
+                <!-- Heading with gradient hover on words -->
+                <h1 class="md:text-5xl font-bold text-white md:mb-6 mb-2 group transition-all duration-700" data-aos="fade-down">
+                    Elevate Your
+                    <span
+                        class="group-hover:bg-linear-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-700">
+                        Business
+                    </span>
+                    with
+                    <span
+                        class="group-hover:bg-linear-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-700">
+                        Innovative
+                    </span>
+                    Solutions
+                </h1>
+
+                <!-- Paragraph -->
+                <p class="md:text-xl text-white mb-20 text-sm" data-aos="fade-up" data-aos-delay="200">
+                    Unlock the potential of your business with our cutting-edge technology.
+                </p>
+
+                <!-- Buttons -->
+                <a href="#"
+                    class="bg-blue-400 text-white md:font-semibold font-thin px-3 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 hover:shadow-2xl hover:shadow-blue-400 hover:transition-shadow hover:duration-300 m-3 relative"
+                    data-aos="zoom-in">
+                    Get Started
+                </a>
+                <a href="#"
+                    class="bg-indigo-500 text-white md:font-semibold font-thin px-3 py-2 md:px-6 md:py-3 rounded-lg hover:bg-indigo-700 hover:shadow-2xl hover:shadow-indigo-500 m-3 relative"
+                    data-aos="zoom-in" >
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="sec2" class="section2  py-20 bg-[url('/img/2666.jpg')] bg-cover bg-bottom">
+            <div class="container mx-auto px-10 py-10 text-center">
+                <!-- Title -->
+                <h2 class="md:text-4xl font-bold text-white md:mb-6 mb-2" data-aos="fade-down">Our Features</h2>
+                <p class="md:text-lg text-white mb-20 text-sm" data-aos="fade-up" data-aos-delay="200">What We Offer</p>
+
+                <!-- Feature Cards Grid -->
+                <div class="grid md:grid-cols-3 gap-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-6xl hover:shadow-white hover:transition-shadow hover:duration-300">
+                        <img class="block w-20 h-20 mx-auto" src="img/392949485_a1a9d112-aebd-4a09-ae81-e896e314d381.svg" alt="">
+                        <h3 class="text-xl font-semibold mb-4">Fast Performance</h3>
+                        <p class="text-gray-700">Experience lightning-fast load times.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-6xl hover:shadow-green-500 hover:transition-shadow hover:duration-300">
+                        <img class="block w-20 h-20 mx-auto" src="img/42121600_green_double_circle_check_mark.jpg" alt="">
+                        <h3 class="text-xl font-semibold mb-4">Secure Platform</h3>
+                        <p class="text-gray-700">Your data is safe with us.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-6xl hover:shadow-red-500 hover:transition-shadow hover:duration-300">
+                        <img class="block w-20 h-20 mx-auto" src="img/2838939_417701-PDQC57-237.svg" alt="">
+                        <h3 class="text-xl font-semibold mb-4">Modern Design</h3>
+                        <p class="text-gray-700">Sleek and user-friendly interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section3 sm:py-20  bg-[url('/img/12482.jpg')] bg-cover bg-bottom h-170 relative">
+            <div class="absolute inset-0 bg-black opacity-40 "></div> <!-- overlay -->
+            <div class="container mx-auto px-6 py-30 text-center relative" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+                    What Our Clients Say
+                </h2>
+
+                <div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0">
+                                <img src="img/40022.jpg" alt="client" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-semibold text-gray-800">James K.</h3>
+                                <span class="text-sm text-gray-500">CEO, Startup</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-left">
+                            Top-notch support and outstanding results. Highly recommended!
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0">
+                                <img src="img/40022.jpg" alt="client" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-semibold text-gray-800">Sarah M.</h3>
+                                <span class="text-sm text-gray-500">Marketing Lead</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-left">
+                            Professional team, fast delivery, and amazing quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="Contact" class="bg-gray-900 py-20 bg-[url('/img/2148500434.jpg')] bg-cover bg-bottom">
+            <h2 class="text-xl md:text-6xl text-gray-800 text-center mb-4">Get In Touch</h2>
+            <p class="text-xl text-gray-800 text-center mb-10">Contact Us Today</p>
+
+            <div class="container mx-auto flex justify-center px-4" data-aos="fade-down" data-aos-delay="200">
+                <form autocomplete="on" class="w-full max-w-md bg-white p-6 md:p-12 rounded-2xl shadow-lg ">
+                    <input type="text" required placeholder="Enter your name"
+                        class="w-full h-11 border rounded-xl px-3 mb-3 focus:outline-none focus:ring-2 focus:ring-red-500 " />
+                    <input type="email" required placeholder="Enter your email"
+                        class="w-full h-11 border rounded-xl px-3 mb-3 focus:outline-none focus:ring-2 focus:ring-red-500" />
+                    <textarea rows="4" required placeholder="Enter your message"
+                        class="w-full border rounded-2xl px-3 py-2 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                    <button class="w-full bg-red-500 text-white py-3 rounded-xl hover:bg-red-600 active:scale-85 transition duration-300 ease-in-out">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-gray-900 text-white py-6 text-center flex flex-col md:flex-row justify-center items-center gap-4">
+            <p>&copy; 2025 TechPro. All rights reserved.</p>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=61576878268926" target="_blank" class="mx-2 hover:text-blue-700 transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/abedmo404/" target="_blank" class="mx-2 hover:text-rose-600 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top"
+        class="hidden fixed bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 hover:scale-110 transition-all duration-300 z-50">
+        ↑
+    </button>
+
+    <!-- JS Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init(); 
+    </script>
+</body>
+</html>
